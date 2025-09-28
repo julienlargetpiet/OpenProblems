@@ -151,7 +151,9 @@ subCalc xs ids nums =
                  else []
         xsbetween = getRangeList xs [(idstrt + 1)..(idstop - 1)]
         rslt = protoCalc xsbetween
-        newxs = xsstrt ++ rslt ++ xsstop
+        newxs = if head rslt /= '-'
+                then xsstrt ++ rslt ++ xsstop
+                else (getRangeList xsstrt [0..(length xsstrt) - 2]) ++ rslt ++ xsstop
         (newids, newnums) = parserPar newxs
     in subCalc newxs newids newnums
 
