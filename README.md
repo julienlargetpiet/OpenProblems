@@ -18,7 +18,7 @@ This problem originates from the motivation to find all possible results given a
 
 So here we are given a set of operators and a set of values.
 
-Basiacally there are `n - 1` operators, on between each value.
+Basiacally there are `n - 1` operators, one between each value.
 
 So it is trivial to find all possible results, we just have to use a cartesian product of all operators `n - 1` times, then put the operators between each value, and calculate the result.
 
