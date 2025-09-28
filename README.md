@@ -57,7 +57,7 @@ Then i created a Data Structure that will help me "taking elements" from a formu
 
 `data PTree a = PNode a [[PTree a]] deriving (Show, Eq)`
 
-It is basically a list that allow different depth lists inside.
+It is basically a list that allows different depth lists inside.
 
 Why ?
 
