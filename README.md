@@ -53,7 +53,7 @@ ghci> all (==5) . map (sum) $ howAdd 5
 True
 ```
 
-Then i created a Data Structure that will help me "taking" from a formula
+Then i created a Data Structure that will help me "taking elements" from a formula
 
 `data PTree a = PNode a [[PTree a]] deriving (Show, Eq)`
 
