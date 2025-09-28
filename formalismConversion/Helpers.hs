@@ -153,9 +153,42 @@ subCalc xs ids nums =
         rslt = protoCalc xsbetween
         newxs = if head rslt /= '-'
                 then xsstrt ++ rslt ++ xsstop
-                else (getRangeList xsstrt [0..(length xsstrt) - 2]) ++ rslt ++ xsstop
+                else let newxsstrt = switchLast xsstrt
+                     in if newxsstrt /= xsstrt
+                        then newxsstrt ++ tail rslt ++ xsstop
+                        else xsstrt ++ rslt ++ xsstop
         (newids, newnums) = parserPar newxs
     in subCalc newxs newids newnums
+
+switchLast :: [Char] -> [Char]
+switchLast xs = reverse $ subSwitchLast (reverse xs) False 
+
+subSwitchLast :: [Char] -> Bool -> [Char]
+subSwitchLast [] _ = []
+subSwitchLast (x:xs) alrd
+    | x == '-' && not alrd = ('+':subSwitchLast xs True)
+    | x == '+' && not alrd = ('-':subSwitchLast xs True)
+    | otherwise = (x:subSwitchLast xs False)
+
+lastIsMinus :: [Char] -> Bool
+lastIsMinus xs = subLastIsMinus . reverse $ xs
+
+subLastIsMinus :: [Char] -> Bool
+subLastIsMinus [] = False
+subLastIsMinus (x:xs)
+    | x == '+' = False
+    | x == '-' = True
+    | otherwise = subLastIsMinus xs
+
+lastIsPlus :: [Char] -> Bool
+lastIsPlus xs = subLastIsPlus . reverse $ xs
+
+subLastIsPlus :: [Char] -> Bool
+subLastIsPlus [] = False
+subLastIsPlus (x:xs)
+    | x == '+' = True
+    | x == '-' = False
+    | otherwise = subLastIsPlus xs
 
 protoCalc :: [Char] -> [Char]
 protoCalc xs = 
