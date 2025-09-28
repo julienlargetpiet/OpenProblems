@@ -86,7 +86,7 @@ ghci> howAddIntricated $ howAdd 4
           [PNode 1 [],PNode 2 [[PNode 1 [],PNode 1 []]]]]]]
 ```
 
-As you see, we find all the possible partitions !
+As you see, we found all the possible partitions !
 
 Great, we just invented a formalism !!!
 
