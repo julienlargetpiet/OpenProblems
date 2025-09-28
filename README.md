@@ -1,6 +1,6 @@
 # OpenProblems
 
-A set of problems i created myself and couldn't solve, each complete solution will earn you 50 bucks !!!
+A collection of original algorithmic problems I couldn’t solve — people who crack them get $50
 
 Contact me at:
 
