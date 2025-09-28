@@ -10,7 +10,7 @@ The name of the first person to solve the problem will be displayed with congrat
 
 ## FormalismConversions (Haskell)
 
-### Statement and motivations
+### Statement and motivation
 
 This problem originates from the motivation to find all possible results given a formula with `n` values, like:
 
@@ -125,5 +125,7 @@ So your goal, is to find an algorithm that would correctly convert from the firs
 
 You will find all the functions you need to solve this problem in `FormalismConversions/FormalismTries.hs`
 
-
+I also provided what i tried, maybe it can help you.
+  
+  
   
