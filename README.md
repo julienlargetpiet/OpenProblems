@@ -8,7 +8,7 @@ Contact me at:
 
 The name of the first person to solve the problem will be displayed with congratulations in this repo!
 
-## FormalismConversions (Haskell)
+## FormalismConversion (Haskell)
 
 ### Statement and motivation
 
