@@ -30,9 +30,9 @@ But as you know, in each formula, comes the parenthesis.
 
 So it will entirely reshape the number of possible results from `len of the operator set ^ (n - 1)` to something much bigger.
 
-The first idea i had was to implement a function that gives me all the possible set sizes, i successfully did it, and it is named `howAdd`.
+The first idea i had was to implement a function that gives me all the possible partition sizes, i successfully did it, and it is named `howAdd`.
 
-It takes the number of values as inputs and returns a vector of vector of Int containing all the set sizes.
+It takes the number of values as inputs and returns a vector of vector of Int containing all the partition sizes.
 
 For example for 4 values:
 
