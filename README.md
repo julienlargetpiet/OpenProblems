@@ -65,7 +65,7 @@ Because look at the outputs for `howAdd 4` for example, at a point i have `[1, 3
 
 Now the question is: how is `3` partitioned ?
 
-The function `howIntricated` with the `PTree` data structure will recursively find all the possible sub-partitions of all partition. 
+The function `howIntricated` with the `PTree` data structure will recursively find all the possible sub-partitions for all partitions. 
 
 Example:
 
