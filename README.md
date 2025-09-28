@@ -28,7 +28,7 @@ In Haskell, to find all operators combinations, it would look like this:
 
 But as you know, in each formula, comes the parenthesis.
 
-So it will entirely reshape the number of possible results to `len of the operator set ^ (n - 1)` to something much bigger.
+So it will entirely reshape the number of possible results from `len of the operator set ^ (n - 1)` to something much bigger.
 
 The first idea i had was to implement a function that gives me all the possible set sizes, i successfully did it, and it is named `howAdd`.
 
