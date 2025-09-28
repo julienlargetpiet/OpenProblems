@@ -127,5 +127,17 @@ You will find all the functions you need to solve this problem in `FormalismConv
 
 I also provided what i tried, maybe it can help you.
   
-  
+## What we can do after
+
+As i mentioned, thanks to this algorithm we will be able to find all results of a given formula:
+
+Example starting from the formalism we want (manually created, named examplePTree), we are able to have all the possible results from `n` elements given an operator set.
+
+```
+ghci> subPuzzle ["12", "4", "22", "87"] "++*" examplePTree
+[("12+4+22*87","1930"),("(12+4)+22*87","1930"),("12+(4+22)*87","2274"),("12+4+(22*87)","1930"),("(12+4)+(22*87)","1930"),("((12+4)+22)*87","3306"),("(12+4+22)*87","3306"),("(12+(4+22))*87","3306"),("12+((4+22)*87)","2274"),("12+(4+(22*87))","1930")]
+```
+
+
+
   
